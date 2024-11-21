@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory,SoftDeletes;
+    use HasFactory,Notifiable,SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -22,7 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile_picture'
+        'picture'
     ];
 
     /**
