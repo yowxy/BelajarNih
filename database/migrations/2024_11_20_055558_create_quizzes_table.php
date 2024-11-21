@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id')->constrained()->cascadeOnDelete();
-            $table->text('Question');
-            $table->string('option_a');
-            $table->string('option_b');
-            $table->string('option_c');
-            $table->string('option_d');
-            $table->char('correct_option');
+            $table->foreignId('clases_id')->constrained()->cascadeOnDelete(); // Relasi ke kelas
+            $table->string('title'); // Nama quiz
+            $table->text('description')->nullable(); // Deskripsi quiz
+            $table->integer('total_questions'); // Jumlah soal dalam quiz
             $table->softDeletes();
             $table->timestamps();
         });

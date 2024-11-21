@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('image_url');
+            $table->boolean('is_bookmarked')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

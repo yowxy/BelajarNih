@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('exam_pages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // User yang mengikuti ujian
-            $table->foreignId('class_id')->constrained()->cascadeOnDelete(); // Kelas terkait
-            $table->string('title'); // Judul soal
-            $table->text('question_text'); // Isi soal  
-            $table->string('correct_answer'); // Jawaban benar
-            $table->string('user_answer')->nullable(); // Jawaban user
-            $table->boolean('is_correct')->default(false); // Status benar/salah
-            $table->integer('score')->nullable(); // Skor untuk soal ini
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('clases_id')->constrained()->cascadeOnDelete();
+            $table->string('title');
+            $table->text('question_text');
+            $table->string('correct_answer');
+            $table->string('user_answer')->nullable();
+            $table->boolean('is_correct')->default(false);
+            $table->integer('score')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
