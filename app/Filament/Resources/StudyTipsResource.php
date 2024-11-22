@@ -6,6 +6,8 @@ use App\Filament\Resources\StudyTipsResource\Pages;
 use App\Filament\Resources\StudyTipsResource\RelationManagers;
 use App\Models\StudyTips;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -24,7 +26,42 @@ class StudyTipsResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('title')
+                    ->helperText('harap di isi ya')
+                    ->required()
+                    ->maxLength(255),
+
+                Forms\Components\FileUpload::make('image_url')
+                    ->disk('public')
+                    ->label('gambar')
+                    ->visibility('public')
+                    ->required()
+                    ->image(),
+
+                RichEditor::make('content')
+                    ->toolbarButtons([
+                        'attachFiles',
+                        'blockquote',
+                        'bold',
+                        'bulletList',
+                        'codeBlock',
+                        'h2',
+                        'h3',
+                        'italic',
+                        'link',
+                        'orderedList',
+                        'redo',
+                        'strike',
+                        'underline',
+                        'undo',
+                    ]),
+
+
+                Toggle::make('is_bookmarked')
+                    ->label('Is Bookmarked?')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->inline(false), // Optional untuk styling
             ]);
     }
 
@@ -32,13 +69,20 @@ class StudyTipsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+
+                 Tables\Columns\ImageColumn::make('image_url')
+                    ->disk('public')
+                    ->circular()
+                    ->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

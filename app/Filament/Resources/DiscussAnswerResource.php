@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\DiscussAnswerResource\Pages;
 use App\Filament\Resources\DiscussAnswerResource\RelationManagers;
 use App\Models\DiscussAnswer;
+use App\Models\DiscussionAnswer;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DiscussAnswerResource extends Resource
 {
-    protected static ?string $model = DiscussAnswer::class;
+    protected static ?string $model = DiscussionAnswer::class;
     protected static ?string $navigationGroup = 'Discussion';
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
