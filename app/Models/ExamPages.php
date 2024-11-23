@@ -12,14 +12,16 @@ class ExamPages extends Model
 
     protected $fillable =
     [
-        'class_id',
-        'user_id',
-        'score',
         'title',
         'question_text',
         'correct_answer',
-        'use_answer',
+        'user_answer',
         'is_correct',
+        'score',
+        'option_a',
+        'option_b',
+        'option_c',
+        'option_d',
     ];
 
     public function class ()
@@ -31,4 +33,15 @@ class ExamPages extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // protected static function booted()
+    // {
+    //     static::saving(function ($examPage) {
+    //         if ($examPage->user_answer) {
+    //             $examPage->is_correct = $examPage->user_answer === $examPage->correct_answer;
+    //             $examPage->score = $examPage->is_correct ? 100 : 0; // Skor 100 jika benar, 0 jika salah
+    //         }
+    //     });
+    // }
+
 }

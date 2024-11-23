@@ -7,6 +7,7 @@ use App\Filament\Resources\QuizezResource\RelationManagers;
 use App\Models\Quizez;
 use App\Models\Quizzes;
 use Filament\Forms;
+use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -25,7 +26,21 @@ class QuizezResource extends Resource
     {
         return $form
             ->schema([
-                //
+
+                Forms\Components\TextInput::make('title')
+                    ->required()
+                    ->helperText('wajib di isi ya !!')
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('description')
+                    ->helperText('wajib di isi ya !!')
+                    ->rows(10)
+                    ->cols(20),
+                Forms\Components\TextInput::make('total_questions')
+                    ->helperText('wajib di isi ya !!')
+                    ->numeric()
+                    ->integer()
+                    ->prefix('Quest')
+                    ->required(),
             ]);
     }
 
