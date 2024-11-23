@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description'); // Deskripsi kelas
             $table->string('thumbnail'); // Thumbnail untuk kelas
             $table->string('video_url'); // URL video materi
-            $table->integer('duration')->nullable(); // Durasi video (menit)
+            $table->integer('duration'); // Durasi video (menit)
             $table->softDeletes();
             $table->timestamps();
         });

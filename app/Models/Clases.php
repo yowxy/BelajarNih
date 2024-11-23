@@ -15,6 +15,12 @@ class Clases extends Model
       'title',
       'description',
       'thumbnail',
+      'video_url',
+      'duration'
+    ];
+
+    protected $casts = [
+        'thumbnail' => 'array',
     ];
 
     public function quizzes(){
