@@ -36,7 +36,7 @@ class ClasesResource extends Resource
                     ->schema([
                         // ...
                         Forms\Components\TextInput::make('title')
-                            ->required()
+                            ->required() 
                             ->maxLength(255)
                             ->label('Class Name')
                             ->helperText('Wajib di isi'),

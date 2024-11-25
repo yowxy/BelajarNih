@@ -6,6 +6,8 @@ use App\Filament\Resources\QuizezResource\Pages;
 use App\Filament\Resources\QuizezResource\RelationManagers;
 use App\Models\Quizez;
 use App\Models\Quizzes;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Notifications\Notification;
 use Filament\Forms;
 use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Form;
@@ -28,6 +30,7 @@ class QuizezResource extends Resource
             ->schema([
 
                 Forms\Components\TextInput::make('title')
+                    ->label('Pertanyaan')
                     ->required()
                     ->helperText('wajib di isi ya !!')
                     ->maxLength(255),
@@ -41,6 +44,39 @@ class QuizezResource extends Resource
                     ->integer()
                     ->prefix('Quest')
                     ->required(),
+
+                    Fieldset::make('option')
+                    ->schema([
+                        Forms\Components\TextInput::make('option_a')
+                            ->label('opsi a')
+                            ->required()
+                            ->prefix('A'),
+
+
+                        Forms\Components\TextInput::make('option_b')
+                            ->label('opsi b')
+                            ->required()
+                            ->prefix('B'),
+
+
+                        Forms\Components\TextInput::make('option_c')
+                            ->label('opsi c')
+                            ->required()
+                            ->prefix('C'),
+
+
+
+                        Forms\Components\TextInput::make('option_d')
+                            ->label('opsi d')
+                            ->required()
+                            ->prefix('D'),
+
+                        Forms\Components\TextInput::make('correct_answer')
+                            ->label('jawaban benar')
+                            ->required()
+                            ->prefix('Coorect'),
+
+                    ])
             ]);
     }
 
@@ -48,13 +84,26 @@ class QuizezResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title')
+                    ->searchable()
+                    ->label('Pertanyaan'),
+                Tables\Columns\TextColumn::make('correct_answer')
+                ->searchable()
+                ->label('Jawaban benar'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                DeleteAction::make()
+                ->successNotification(
+                    Notification::make()
+                         ->success()
+                         ->title('User deleted')
+                         ->body('The user has been deleted successfully.'),
+                 )
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

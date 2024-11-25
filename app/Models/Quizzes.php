@@ -12,11 +12,16 @@ class Quizzes extends Model
 
     protected $fillable =
     [
-        'class_id',
+        'clases_id',
         'title',
         'question',
-        'options',
-        'correct_answer'
+        'description',
+        'correct_answer',
+        'total_questions',
+        'option_a',
+        'option_b',
+        'option_c',
+        'option_d',
     ];
 
     public function class()
