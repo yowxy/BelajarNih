@@ -24,6 +24,12 @@ class StudyTips extends Model
         return $this->belongsTo(User::class);
     }
 
- 
+    public function getImageUrlAttribute($value)
+    {
+        return asset('storage/' . $value);
+    }
+
+
+
 
 }

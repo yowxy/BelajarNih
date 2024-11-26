@@ -20,7 +20,7 @@ class StudyTipsResource extends Resource
 {
     protected static ?string $model = StudyTips::class;
 
-    protected static ?string $navigationGroup = 'Learning';
+    protected static ?string $navigationGroup = 'Discussion';
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
@@ -33,8 +33,7 @@ class StudyTipsResource extends Resource
                     ->maxLength(255),
 
                 Forms\Components\FileUpload::make('image_url')
-                    ->disk('public')
-                    ->label('gambar')
+              ->label('gambar')
                     ->visibility('public')
                     ->required()
                     ->image(),
@@ -74,7 +73,6 @@ class StudyTipsResource extends Resource
                     ->searchable(),
 
                  Tables\Columns\ImageColumn::make('image_url')
-                    ->disk('public')
                     ->circular()
                     ->searchable(),
             ])
