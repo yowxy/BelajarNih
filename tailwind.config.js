@@ -12,7 +12,10 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+            },
+            borderRadius: {
+                '36':'36px'
             },
             colors: {
               customYellow: '#E7E51D',
@@ -20,6 +23,9 @@ export default {
             },
             backgroundImage: {
                 'gradient-custom': 'linear-gradient(to bottom right, #000000 30%, #E7E51D 83%)',
+            },
+            backgroundColor: {
+                'gradient-home': 'linear-gradient(to bottm right, #000000 91%, #E7E51D 16% )',
             },
         },
     },
