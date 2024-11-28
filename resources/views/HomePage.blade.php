@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    {{-- navbar --}}
     <div class="justify-center w-full h-full bg-gradient-custom font-poppins">
+
+        {{-- navbar --}}
         <nav class="p-6 bg-transparent">
             <div class="flex items-center justify-between text-white">
                 <!-- Judul di kiri -->
