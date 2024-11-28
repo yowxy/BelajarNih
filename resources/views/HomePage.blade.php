@@ -96,7 +96,7 @@
                     <div class="text-white" >
                         <h1 class="text-4xl font-semibold text-white">Apa sih BelajarNih itu ?</h1>
                         <p class="mt-3">
-                                BelajarNih adalah platform e-learning yang dirancang <br>   
+                                BelajarNih adalah platform e-learning yang dirancang <br>
                                 buat kamu yang pengen upgrade skill dan raih impian. <br>
                                 Dari kelas-kelas coding, desain, hingga pelajaran sekolah, <br>
                                 semuanya tersedia buat bantu lo jadi expert. Di BelajarNih, <br>
@@ -109,6 +109,7 @@
             </div>
         </section>
 
+        {{-- kenapa harus BelajarNih --}}
         <section>
             <div>
                 <div class="items-center justify-center ">
@@ -124,8 +125,8 @@
                                 Lihat Detail
                             </button>
                         </div>
-                        
-                        
+
+
                         <div class="bg-black w-[305px] h-[396px] mx-[58px] rounded-[29px] flex flex-col items-center justify-center relative">
                             <img src="{{ asset('image/image1.png') }}" alt="" class="w-[110px] h-[114px]">
                             <h1 class="self-start mt-4 ml-4 font-semibold text-white text-1xl">
@@ -148,26 +149,122 @@
                             </button>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
         </section>
 
+        {{-- section sell --}}
         <section>
             <div class="flex items-center justify-center mt-24">
-                <div class="w-[817px] h-[340px] bg-gradient-custom flex flex-col rounded-3xl relative">
-                        <h1 class="p-10 text-3xl font-semibold text-white">
-                            100% gratis untuk semua  <br>
-                            orang yang mau belajar di  <br>
-                            BelajarNih <br> 
+                <div class="flex flex-row gap-10">
+
+                    <div class="w-[817px] h-[340px] bg-gradient-custom flex flex-col rounded-3xl relative">
+                            <h1 class="p-10 text-3xl font-semibold text-white">
+                                100% gratis untuk semua  <br>
+                                orang yang mau belajar di  <br>
+                                BelajarNih <br>
+                            </h1>
+                            <button class="text-white bg-black rounded-xl w-[262px] h-[87px] mx-5 font-semibold text-2xl absolute bottom-4 left-4">
+                                    Daftar Sekarang
+                            </button>
+                    </div>
+
+
+                    <div class="w-[426px] h-[340px] bg-gradient-custom rounded-3xl">
+                        <h1 class="p-4 text-2xl font-semibold text-white">
+                            Jelajahi Kelas <br>
+                            Sekarangg <br>
                         </h1>
-                        <button class="text-white bg-black rounded-xl w-[262px] h-[87px] mx-5 font-semibold text-2xl absolute bottom-4 left-4">
-                                Daftar Sekarang
-                        </button>
-                </div>              
+                        <p class="p-4 text-white">
+                            Akses ribuan kelas secara gratis <br>
+                            dan mulai belajar skill baru <br>
+                            sekarang <br>
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </section>
+
+        {{-- Testimoni --}}
+
+        <section>
+            <div class="mt-[99px]">
+                <h1 class="text-white text-3xl text-center font-semibold">Testimoni Pengguna</h1>
+                <div  class="justify-center flex" >
+                    <div class="flex flex-row mx-4">
+                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
+                            <h1 class="text-white  p-4  font-semibold">
+                                Gila ini 100% gratis loh, Kapan <br>
+                                lagi kan ada e-learning yang <br>
+                                100% gratis <br>
+                            </h1>
+                            <p class="text-white p-4 text-xs">
+                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
+                                soalnya di sini gak tentang pelajaran sekolah. <br>
+                            </p>
+                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
+                                <div class="flex flex-col">
+                                    <h1 class="text-white">Raven</h1>
+                                    <p class="text-white" >1 jam yang lalu</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
+                            <h1 class="text-white  p-4  font-semibold">
+                                Gila ini 100% gratis loh, Kapan <br>
+                                lagi kan ada e-learning yang <br>
+                                100% gratis <br>
+                            </h1>
+                            <p class="text-white p-4 text-xs">
+                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
+                                soalnya di sini gak tentang pelajaran sekolah. <br>
+                            </p>
+                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
+                                <div class="flex flex-col">
+                                    <h1 class="text-white">Raven</h1>
+                                    <p class="text-white" >1 jam yang lalu</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
+                            <h1 class="text-white  p-4  font-semibold">
+                                Gila ini 100% gratis loh, Kapan <br>
+                                lagi kan ada e-learning yang <br>
+                                100% gratis <br>
+                            </h1>
+                            <p class="text-white p-4 text-xs">
+                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
+                                soalnya di sini gak tentang pelajaran sekolah. <br>
+                            </p>
+                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
+                                <div class="flex flex-col">
+                                    <h1 class="text-white">Raven</h1>
+                                    <p class="text-white" >1 jam yang lalu</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- footer --}}
+
+        <footer class="w-full h-[273px] bg-black mt-[360px]">
+            <div class="flex flex-col text-white p-12">
+                <h1 class="text-white font-semibold text-3xl" >BelajarNih</h1>
+                <p class="text-white">Mulai Belajar, Wujudkan Mimpi!</p>
+            </div>
+        </footer>
 
 
     </div>
