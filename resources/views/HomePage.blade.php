@@ -183,9 +183,11 @@
                             dan mulai belajar skill baru <br>
                             sekarang <br>
                         </p>
-                        <button class="bg-yellow-300 rounded-xl w-[212px] h-[73px] p-5 font-semibold text-[20px] text-white">
-                            Explore Sekarang
-                        </button>
+                        <div class="p-6" >
+                            <button class="bg-yellow-300 rounded-xl w-[290 px] h-[73px] p-5 font-semibold text-[20px] text-white">
+                                Explore Sekarang
+                            </button>
+                        </div>
                     </div>
 
                 </div>
