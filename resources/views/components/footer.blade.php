@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <footer class="w-full h-[273px] bg-black mt-[360px]">
+    <footer class="w-full h-[273px] bg-black mt-[120px]">
         <div class="flex flex-col text-white p-12">
             <h1 class="text-white font-semibold text-3xl" >BelajarNih</h1>
             <p class="text-white">Mulai Belajar, Wujudkan Mimpi!</p>

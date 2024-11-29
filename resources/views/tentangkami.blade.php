@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="justify-center w-full h-full bg-gradient-custom font-poppins">
+    <div class="    ">
         @include('components.navbar')
 
         <section>

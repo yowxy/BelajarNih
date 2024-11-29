@@ -17,3 +17,7 @@ Route::get('/register',function(){
 Route::get('/tentang-kami', function(){
     return view('tentangkami');
 });
+
+Route::get('/tips-belajar', function(){
+    return view('tips-belajar');
+});
