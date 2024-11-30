@@ -21,3 +21,7 @@ Route::get('/tentang-kami', function(){
 Route::get('/tips-belajar', function(){
     return view('tips-belajar');
 });
+
+Route::get('/kelas', function(){
+    return view('kelas');
+});

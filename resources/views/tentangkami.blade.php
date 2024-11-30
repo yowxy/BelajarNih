@@ -10,9 +10,8 @@
 </head>
 
 <body>
-    <div class="    ">
+    <div class="justify-center w-full h-full bg-gradient-custom font-poppins">
         @include('components.navbar')
-
         <section>
             <div class="container mx-auto">
                     <div class="p-14 mt-11 flex flex-row justify-evenly">
