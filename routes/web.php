@@ -25,3 +25,8 @@ Route::get('/tips-belajar', function(){
 Route::get('/kelas', function(){
     return view('kelas');
 });
+
+
+Route::get('/discussion', function(){
+    return view('Discussions.index');
+});

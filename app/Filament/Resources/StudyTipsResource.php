@@ -6,6 +6,7 @@ use App\Filament\Resources\StudyTipsResource\Pages;
 use App\Filament\Resources\StudyTipsResource\RelationManagers;
 use App\Models\StudyTips;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
@@ -32,9 +33,8 @@ class StudyTipsResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\FileUpload::make('image_url')
-              ->label('gambar')
-                    ->visibility('public')
+                FileUpload::make('image_url')
+                    // ->label('gambar')
                     ->required()
                     ->image(),
 
@@ -73,7 +73,6 @@ class StudyTipsResource extends Resource
                     ->searchable(),
 
                  Tables\Columns\ImageColumn::make('image_url')
-                    ->circular()
                     ->searchable(),
             ])
             ->filters([
