@@ -26,7 +26,10 @@ Route::get('/kelas', function(){
     return view('kelas');
 });
 
-
 Route::get('/discussion', function(){
     return view('Discussions.index');
+});
+
+Route::get('/discussion-detail', function(){
+    return  view('Discussions.detail');
 });
