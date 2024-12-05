@@ -50,9 +50,7 @@
                 </div>
             </div>
         </div>
-
         @include('components.footer')
     </section>
 </body>
-
 </html>

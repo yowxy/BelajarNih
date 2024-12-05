@@ -33,3 +33,7 @@ Route::get('/discussion', function(){
 Route::get('/discussion-detail', function(){
     return  view('Discussions.detail');
 });
+
+Route::get('/forum-asked', function(){
+    return view('Discussions.forum');
+});
