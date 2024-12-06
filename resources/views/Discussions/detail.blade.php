@@ -18,14 +18,14 @@
                     <div class="flex flex-row ">
                         <img src="{{ asset('image/image4.png') }}" alt="image" class="w-[118px] h-[118px] mr-4">
                         <div class="flex flex-col p-5">
-                            <h1 class="text-black text-2xl font-semibold">Kenapa sih Kita Perlu Belajar HTML </h1>
+                            <h1 class="text-2xl font-semibold text-black">Kenapa sih Kita Perlu Belajar HTML </h1>
                             <div class="flex flex-row items-center">
-                                <img src="{{ asset('image/Vector.png') }}" alt="vector" class="w-7 h-5">
-                                <h1 class="text-xl mx-2">Pengenalan HTML</h1>
+                                <img src="{{ asset('image/Vector.png') }}" alt="vector" class="h-5 w-7">
+                                <h1 class="mx-2 text-xl">Pengenalan HTML</h1>
                             </div>
                             <div class="flex flex-row items-center mt-1">
                                 <img src="{{ asset('image/balasan1.png') }}" alt="vector" class="w-5 h-5">
-                                <h1 class="text-xl mx-2">Balasan</h1>
+                                <h1 class="mx-2 text-xl">Balasan</h1>
                             </div>
                         </div>
                     </div>
@@ -39,15 +39,7 @@
                         <img src="{{ asset('image/img_detail.png') }}" alt="ImageDetail" class="w-[858px] h-[571px]">
                     </div>
                 </div>
-                <div class="mt-[109px] justify-center items-center flex">
-                    <div class="bg-white w-[1038px] h-[271px] rounded-3xl flex flex-col items-center justify-center">
-                        <h1 class="font-semibold text-center text-4xl">Belum ada Jawaban</h1>
-                        <p class="text-xl" >Bantu Sobat Belajar menjawab kendala ini yuk</p>
-                        <div class="mt-3" >
-                            <button class="bg-yellow-300 w-[321px] h-[68px] rounded-2xl text-2xl font-semibold">Beri Jawaban</button>
-                        </div>
-                    </div>
-                </div>
+               @include('components.jawab')
             </div>
         </div>
         @include('components.footer')

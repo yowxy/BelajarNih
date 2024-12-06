@@ -19,7 +19,11 @@ Route::get('/tentang-kami', function(){
 });
 
 Route::get('/tips-belajar', function(){
-    return view('tips-belajar');
+    return view('tips-belajar.index');
+});
+
+Route::get('/tips-belajar-detail', function(){
+    return view('tips-belajar.detail');
 });
 
 Route::get('/kelas', function(){
