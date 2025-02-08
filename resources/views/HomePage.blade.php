@@ -86,8 +86,8 @@
         {{-- apasih BelajarNih itu --}}
 
         <section class="m-10 ">
-            <div class="flex flex-row mt-16 justify-evenly">
-                <div class="bg-gradient-custom w-[375px] h-[345px] rounded-36 text-center justify-center flex  items-center ">
+            <div class="flex flex-col mt-16 md:flex-row justify-evenly">
+                <div class="bg-gradient-custom md:w-[375px] md:h-[345px]  w-auto h-auto rounded-36 text-center justify-center flex  items-center flex-col">
                     <div class="flex flex-col" >
                         <img src="{{ asset('image/education.png') }}" alt="education.png" class="w-[226px] h-[226px]">
                         <h1 class="text-white" >Temukan Skil hari ini</h1>
@@ -95,7 +95,7 @@
                 </div>
                 <div>
                     <div class="text-white" >
-                        <h1 class="text-4xl font-semibold text-white">Apa sih BelajarNih itu ?</h1>
+                        <h1 class="mt-3 text-4xl font-semibold text-white ">Apa sih BelajarNih itu ?</h1>
                         <p class="mt-3">
                                 BelajarNih adalah platform e-learning yang dirancang <br>
                                 buat kamu yang pengen upgrade skill dan raih impian. <br>
@@ -115,7 +115,7 @@
             <div>
                 <div class="items-center justify-center ">
                     <h1 class="text-4xl font-semibold text-center text-white mt-[230px] ">Kenapa Harus BelajarNih</h1>
-                    <div class="flex flex-row justify-center mt-20" >
+                    <div class="flex flex-col justify-center gap-3 mt-20 md:flex-row" >
                         <div class="bg-black w-[305px] h-[396px] mx-[58px] rounded-[29px] flex flex-col items-center justify-center relative">
                             <img src="{{ asset('image/teach.png') }}" alt="" class="w-[110px] h-[114px]">
                             <h1 class="self-start mt-4 ml-4 font-semibold text-white text-1xl">
@@ -159,21 +159,23 @@
         {{-- section sell --}}
         <section>
             <div class="flex items-center justify-center mt-24">
-                <div class="flex flex-row gap-10">
+                <div class="flex flex-col gap-10 md:flex-row">
 
-                    <div class="w-[817px] h-[340px] bg-gradient-custom flex flex-col rounded-3xl relative">
+                    <div class="md:w-[817px] md:h-[340px] bg-gradient-custom flex flex-col rounded-3xl relative w-auto h-auto">
                             <h1 class="p-10 text-3xl font-semibold text-white">
                                 100% gratis untuk semua  <br>
                                 orang yang mau belajar di  <br>
                                 BelajarNih <br>
                             </h1>
-                            <button class="text-white bg-black rounded-xl w-[262px] h-[87px] mx-5 font-semibold text-2xl absolute bottom-4 left-4">
-                                    Daftar Sekarang
-                            </button>
+                            <div class="p-6" >
+                                <button class="text-white bg-black rounded-xl md:w-[262px] w-[262px] h-[87px]  md:h-[87px] mx-5 font-semibold text-2xl bottom-4 left-4">
+                                        Daftar Sekarang
+                                </button>
+                            </div>
                     </div>
 
 
-                    <div class="w-[426px] h-[340px] bg-gradient-custom rounded-3xl">
+                    <div class="md:w-[426px] md:h-[340px] bg-gradient-custom rounded-3xl h-auto">
                         <h1 class="p-4 text-2xl font-semibold text-white">
                             Jelajahi Kelas <br>
                             Sekarangg <br>
@@ -183,7 +185,7 @@
                             dan mulai belajar skill baru <br>
                             sekarang <br>
                         </p>
-                        <div class="p-6" >
+                        <div class="justify-center p-6">
                             <button class="bg-yellow-300 rounded-xl w-[290 px] h-[73px] p-5 font-semibold text-[20px] text-white">
                                 Explore Sekarang
                             </button>
@@ -198,65 +200,81 @@
 
         <section>
             <div class="mt-[99px]">
-                <h1 class="text-white text-3xl text-center font-semibold">Testimoni Pengguna</h1>
-                <div  class="justify-center flex" >
-                    <div class="flex flex-row mx-4">
-                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
-                            <h1 class="text-white  p-4  font-semibold">
-                                Gila ini 100% gratis loh, Kapan <br>
-                                lagi kan ada e-learning yang <br>
-                                100% gratis <br>
-                            </h1>
-                            <p class="text-white p-4 text-xs">
-                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
-                                soalnya di sini gak tentang pelajaran sekolah. <br>
-                            </p>
-                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
-                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
-                                <div class="flex flex-col">
+                <h1 class="text-3xl font-semibold text-center text-white">Testimoni Pengguna</h1>
+                <div  class="flex flex-col justify-center md:flex-row" >
+                    <div class="flex flex-col mx-4 md:flex-row">
+                        <div class="w-auto md:w-[409px] h-auto md:h-[231px] bg-black rounded-xl mt-10 mx-4 relative">
+                            <div class="p-4">
+                                <h1 class="font-semibold text-white">
+                                    Gila ini 100% gratis loh, Kapan <br>
+                                    lagi kan ada e-learning yang <br>
+                                    100% gratis <br>
+                                </h1>
+                                <p class="mt-2 text-xs text-white">
+                                    Ini worth it banget sih kalian harus cek kelas yang ada di sini <br>
+                                    soalnya di sini gak tentang pelajaran sekolah. <br>
+                                </p>
+                            </div>
+                            <div class="flex items-center m-3 bottom-2 right-4">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6">
+                                <div class="ml-2">
                                     <h1 class="text-white">Raven</h1>
-                                    <p class="text-white" >1 jam yang lalu</p>
+                                    <p class="text-xs text-white">1 jam yang lalu</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
-                            <h1 class="text-white  p-4  font-semibold">
-                                Gila ini 100% gratis loh, Kapan <br>
-                                lagi kan ada e-learning yang <br>
-                                100% gratis <br>
-                            </h1>
-                            <p class="text-white p-4 text-xs">
-                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
-                                soalnya di sini gak tentang pelajaran sekolah. <br>
-                            </p>
-                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
-                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
-                                <div class="flex flex-col">
+
+
+                    </div>
+                    <div class="flex flex-col mx-4 md:flex-row">
+                        <div class="w-auto md:w-[409px] h-auto md:h-[231px] bg-black rounded-xl mt-10 mx-4 relative">
+                            <div class="p-4">
+                                <h1 class="font-semibold text-white">
+                                    Gila ini 100% gratis loh, Kapan <br>
+                                    lagi kan ada e-learning yang <br>
+                                    100% gratis <br>
+                                </h1>
+                                <p class="mt-2 text-xs text-white">
+                                    Ini worth it banget sih kalian harus cek kelas yang ada di sini <br>
+                                    soalnya di sini gak tentang pelajaran sekolah. <br>
+                                </p>
+                            </div>
+                            <div class="flex items-center m-3 bottom-2 right-4">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6">
+                                <div class="ml-2">
                                     <h1 class="text-white">Raven</h1>
-                                    <p class="text-white" >1 jam yang lalu</p>
+                                    <p class="text-xs text-white">1 jam yang lalu</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="w-[409px] h-[231px] bg-black rounded-xl  justify-center items-center  mt-10  relative mx-4">
-                            <h1 class="text-white  p-4  font-semibold">
-                                Gila ini 100% gratis loh, Kapan <br>
-                                lagi kan ada e-learning yang <br>
-                                100% gratis <br>
-                            </h1>
-                            <p class="text-white p-4 text-xs">
-                                ini worth it banget sih kalian harus cek kelas yang ada di di sini <br>
-                                soalnya di sini gak tentang pelajaran sekolah. <br>
-                            </p>
-                            <div class="absolute bottom-2 right-4 flex flex-row justify-evenly">
-                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6 mx-4">
-                                <div class="flex flex-col">
+
+
+                    </div>
+                    <div class="flex flex-col mx-4 md:flex-row">
+                        <div class="w-auto md:w-[409px] h-auto md:h-[231px] bg-black rounded-xl mt-10 mx-4 relative">
+                            <div class="p-4">
+                                <h1 class="font-semibold text-white">
+                                    Gila ini 100% gratis loh, Kapan <br>
+                                    lagi kan ada e-learning yang <br>
+                                    100% gratis <br>
+                                </h1>
+                                <p class="mt-2 text-xs text-white">
+                                    Ini worth it banget sih kalian harus cek kelas yang ada di sini <br>
+                                    soalnya di sini gak tentang pelajaran sekolah. <br>
+                                </p>
+                            </div>
+                            <div class="flex items-center m-3 bottom-2 right-4">
+                                <img src="{{ asset('image/image3.png') }}" alt="image_profile" class="w-6 h-6">
+                                <div class="ml-2">
                                     <h1 class="text-white">Raven</h1>
-                                    <p class="text-white" >1 jam yang lalu</p>
+                                    <p class="text-xs text-white">1 jam yang lalu</p>
                                 </div>
                             </div>
                         </div>
+
+
 
                     </div>
                 </div>
@@ -266,8 +284,8 @@
         {{-- footer --}}
 
         <footer class="w-full h-[273px] bg-black mt-[360px]">
-            <div class="flex flex-col text-white p-12">
-                <h1 class="text-white font-semibold text-3xl" >BelajarNih</h1>
+            <div class="flex flex-col p-12 text-white">
+                <h1 class="text-3xl font-semibold text-white" >BelajarNih</h1>
                 <p class="text-white">Mulai Belajar, Wujudkan Mimpi!</p>
             </div>
         </footer>
